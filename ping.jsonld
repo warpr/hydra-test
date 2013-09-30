@@ -28,7 +28,7 @@
             "rdfs:label": "Message",
             "rdfs:comment": "The payload of a pong response",
             "rdfs:domain": "ping:Pong",
-            "rdfs:range": "rdfs:Literal"
+            "rdfs:range": "xsd:string"
         }
     ]
 }
