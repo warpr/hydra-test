@@ -1,0 +1,159 @@
+{
+    "@context": {
+        "vocab": "https://frob.nl/tmp/hydra/vocab.jsonld#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "supportedProperties": "hydra:supportedProperties",
+        "code": "hydra:statusCode",
+        "description": "rdfs:comment",
+        "ApiDocumentation": "hydra:ApiDocumentation",
+        "statusCodes": "hydra:statusCodes",
+        "supportedOperations": "hydra:supportedOperations",
+        "writeonly": "hydra:writeonly",
+        "expects": {
+            "@id": "hydra:expects",
+            "@type": "@id"
+        },
+        "hydra": "http://purl.org/hydra/core#",
+        "readonly": "hydra:readonly",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "label": "rdfs:label",
+        "domain": {
+            "@id": "rdfs:domain",
+            "@type": "@id"
+        },
+        "returns": {
+            "@id": "hydra:returns",
+            "@type": "@id"
+        },
+        "supportedClasses": "hydra:supportedClasses",
+        "property": "hydra:property",
+        "range": {
+            "@id": "rdfs:range",
+            "@type": "@id"
+        },
+        "method": "hydra:method"
+    },
+    "supportedClasses": [
+        {
+            "label": "Ping",
+            "@id": "https://frob.nl/tmp/hydra/vocab.jsonld#Ping",
+            "@type": "hydra:Class",
+            "supportedProperties": [
+                {
+                    "readonly": true,
+                    "property": {
+                        "domain": "https://frob.nl/tmp/hydra/vocab.jsonld#Ping",
+                        "description": "A message",
+                        "supportedOperations": [],
+                        "label": "message",
+                        "range": "http://www.w3.org/2001/XMLSchema#string",
+                        "@id": "https://frob.nl/tmp/hydra/vocab.jsonld#Ping/message",
+                        "@type": "rdf:Property"
+                    },
+                    "writeonly": false
+                }
+            ],
+            "description": "Ping",
+            "supportedOperations": [
+                {
+                    "description": "",
+                    "statusCodes": [ { "code": 200, "description": "Pong." } ],
+                    "expects": null,
+                    "label": "Retrieves a message",
+                    "returns": "http://www.w3.org/2001/XMLSchema#string",
+                    "method": "GET"
+                }
+            ]
+        },
+        {
+            "supportedProperties": [
+                {
+                    "readonly": true,
+                    "property": {
+                        "domain": "https://frob.nl/tmp/hydra/vocab.jsonld#EntryPoint",
+                        "description": "entry point -> ping",
+                        "supportedOperations": [
+                            {
+                                "description": "",
+                                "statusCodes": [],
+                                "expects": null,
+                                "label": "Request a pong response",
+                                "returns": "https://frob.nl/tmp/hydra/pong.jsonld#Pong",
+                                "method": "GET"
+                            }
+                        ],
+                        "label": "ping",
+                        "range": "http://www.w3.org/2001/XMLSchema#anyURI",
+                        "@id": "https://frob.nl/tmp/hydra/vocab.jsonld#EntryPoint/ping",
+                        "@type": "rdf:Property"
+                    },
+                    "writeonly": false
+                }
+            ],
+            "description": "The main entry point or homepage of the API.",
+            "supportedOperations": [
+                {
+                    "description": "",
+                    "statusCodes": [],
+                    "expects": null,
+                    "label": "The APIs main entry point.",
+                    "returns": "https://frob.nl/tmp/hydra/vocab.jsonld#EntryPoint",
+                    "method": "GET"
+                }
+            ],
+            "label": "EntryPoint",
+            "@id": "https://frob.nl/tmp/hydra/vocab.jsonld#EntryPoint",
+            "@type": "hydra:Class"
+        },
+        {
+            "description": "",
+            "@id": "http://www.w3.org/2001/XMLSchema#string",
+            "@type": "rdfs:Datatype",
+            "label": "string"
+        },
+        {
+            "description": "",
+            "@id": "http://www.w3.org/2001/XMLSchema#integer",
+            "@type": "rdfs:Datatype",
+            "label": "integer"
+        },
+        {
+            "description": "",
+            "@id": "http://www.w3.org/2001/XMLSchema#float",
+            "@type": "rdfs:Datatype",
+            "label": "float"
+        },
+        {
+            "description": "",
+            "@id": "http://www.w3.org/2001/XMLSchema#double",
+            "@type": "rdfs:Datatype",
+            "label": "double"
+        },
+        {
+            "description": "",
+            "@id": "http://www.w3.org/2001/XMLSchema#boolean",
+            "@type": "rdfs:Datatype",
+            "label": "boolean"
+        },
+        {
+            "description": "",
+            "@id": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@type": "rdfs:Datatype",
+            "label": "IRI"
+        },
+        {
+            "description": "",
+            "@id": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "@type": "rdfs:Datatype",
+            "label": "datetime"
+        },
+        {
+            "description": "",
+            "@id": "http://www.w3.org/2002/07/owl#Nothing",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "label": "void"
+        }
+    ],
+    "@id": "https://frob.nl/tmp/hydra/vocab.jsonld",
+    "@type": "ApiDocumentation"
+}

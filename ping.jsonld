@@ -1,0 +1,10 @@
+{
+    "@context": {
+        "dc": "http://purl.org/dc/terms/",
+        "pong": "https://frob.nl/tmp/hydra/pong.jsonld#"
+    },
+    "@id": "https://frob.nl/tmp/hydra/ping.jsonld",
+    "@type": "pong:Pong",
+    "dc:title": "Pong",
+    "pong:message": { "@value": "Hello, World!", "@language": "en" }
+}

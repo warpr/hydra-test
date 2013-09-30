@@ -1,0 +1,6 @@
+{
+    "@context": "https://frob.nl/tmp/hydra/context.jsonld",
+    "@id": "https://frob.nl/tmp/hydra/entrypoint.jsonld",
+    "@type": "EntryPoint",
+    "ping": "https://frob.nl/tmp/hydra/ping.jsonld"
+}

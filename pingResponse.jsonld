@@ -1,0 +1,15 @@
+{
+    "@context": {
+        "dc": "http://purl.org/dc/terms/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "ping": "https://frob.nl/tmp/hydra/pingResponse.jsonld#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@id": "https://frob.nl/tmp/hydra/pingResponse.jsonld",
+    "@type": "https://frob.nl/tmp/hydra/pingResponse.jsonld",
+    "dc:title": "Pong",
+    "ping:message": { "@value": "Hello, World!", "@language": "en" }
+}
