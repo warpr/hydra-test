@@ -1,10 +1,34 @@
 {
     "@context": {
         "dc": "http://purl.org/dc/terms/",
-        "pong": "https://frob.nl/tmp/hydra/pong.jsonld#"
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "ping": "https://frob.nl/tmp/hydra/ping.jsonld#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+
+        "rdfs:domain": { "@type": "@id" },
+        "rdfs:range": { "@type": "@id" }
     },
-    "@id": "https://frob.nl/tmp/hydra/ping.jsonld",
-    "@type": "pong:Pong",
-    "dc:title": "Pong",
-    "pong:message": { "@value": "Hello, World!", "@language": "en" }
+    "@graph": [
+        {
+            "@id": "https://frob.nl/tmp/hydra/ping.jsonld#",
+            "@type": "owl:Ontology",
+            "dc:creator": "Kuno Woudt <kuno@frob.nl>"
+        },
+        {
+            "@id": "ping:Pong",
+            "@type": "owl:Class",
+            "rdfs:comment": "A response to a ping request",
+            "rdfs:label": "Pong"
+        },
+        {
+            "@id": "ping:message",
+            "@type": "owl:DatatypeProperty",
+            "rdfs:label": "Message",
+            "rdfs:comment": "The payload of a pong response",
+            "rdfs:domain": "ping:Pong",
+            "rdfs:range": "rdfs:Literal"
+        }
+    ]
 }

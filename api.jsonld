@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "api": "https://frob.nl/tmp/hydra/api.jsonld#",
+        "hydra": "http://purl.org/hydra/core#",
+        "ping": "https://frob.nl/tmp/hydra/pong.jsonld#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+
+        "hydra:expects": { "@type": "@id" },
+        "hydra:returns": { "@type": "@id" },
+
+        "rdfs:domain": { "@type": "@id" },
+        "rdfs:range": { "@type": "@id" }
+    },
+    "@id": "https://frob.nl/tmp/hydra/api.jsonld",
+    "@type": "hydra:ApiDocumentation",
+    "hydra:supportedClasses": [
+        {
+            "@id": "api:Ping",
+            "@type": "hydra:Class",
+            "rdfs:label": "Ping",
+            "rdfs:comment": "entry point for performing ping requests",
+            "hydra:supportedProperties": [],
+            "hydra:supportedOperations": [
+                {
+                    "hydra:statusCodes": [
+                        { "hydra:statusCode": 200, "rdfs:comment": "Pong." }
+                    ],
+                    "hydra:expects": null,
+                    "rdfs:label": "Ping",
+                    "rdfs:comment": "Perform a ping request",
+                    "hydra:returns": "ping:Pong",
+                    "hydra:method": "GET"
+                }
+            ]
+        }
+    ]
+}
