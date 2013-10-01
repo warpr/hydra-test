@@ -1,28 +1,15 @@
 {
-    "@context": {
-        "dc": "http://purl.org/dc/terms/",
-        "hydra": "http://purl.org/hydra/core#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-
-        "papi": "https://frob.nl/tmp/hydra/ping.api.jsonld",
-        "ping": "https://frob.nl/tmp/hydra/ping.api.jsonld#",
-
-        "hydra:entrypoint": { "@type": "@id" },
-        "rdfs:range": { "@type": "@id" }
-    },
-    "@id": "papi:EntryPoint",
+    "@context": "https://frob.nl/tmp/hydra/context.jsonld",
+    "@id": "papi:Root",
     "@type": "hydra:Class",
-    "rdfs:label": "papi:EntryPoint",
+    "rdfs:label": "papi:Root",
     "rdfs:comment": "Entry point of the Ping API.",
     "hydra:entrypoint": "https://frob.nl/tmp/hydra/",
     "hydra:supportedProperties": [
         {
             "hydra:property": {
                 "@id": "papi:request",
-                "@type": "rdf:Property"
+                "@type": "rdf:Property",
                 "rdfs:label": "papi:request",
                 "rdfs:comment": "IRI to perform a ping request",
                 "hydra:supportedOperations": [
@@ -30,21 +17,21 @@
                         "@id": "papi:request/GET",
                         "@type": "hydra:Operation",
                         "rdfs:label": "papi:request/GET",
-                        "hydra:method": "GET"
-                        "hydra:returns": "ping:Pong",
+                        "hydra:method": "GET",
+                        "hydra:returns": "ping:Pong"
                     }
                 ],
-                "rdfs:range": "http://www.w3.org/2001/XMLSchema#anyURI",
+                "rdfs:range": "xsd:anyURI"
             },
             "hydra:readonly": true
         }
     ],
     "hydra:supportedOperations": [
         {
-            "@id": "papi:EntryPoint/GET",
+            "@id": "papi:Root/GET",
             "@type": "hydra:Operation",
-            "rdfs:label": "papi:EntryPoint/GET",
-            "hydra:returns": "papi:EntryPoint",
+            "rdfs:label": "papi:Root/GET",
+            "hydra:returns": "papi:Root",
             "hydra:method": "GET"
         }
     ]
