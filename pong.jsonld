@@ -2,12 +2,13 @@
     "@context": {
         "dc": "http://purl.org/dc/terms/",
         "hydra": "http://purl.org/hydra/core#",
+        "papi": "https://frob.nl/tmp/hydra/ping.api.jsonld#",
         "ping": "https://frob.nl/tmp/hydra/ping.jsonld#",
         "hydra:apiDocumentation": { "@type": "@id" }
     },
     "@id": "https://frob.nl/tmp/hydra/pong.jsonld",
     "@type": "ping:Pong",
-    "hydra:apiDocumentation": "https://frob.nl/tmp/hydra/api.jsonld",
     "dc:title": "Pong",
-    "ping:message": "Hello, World!"
+    "ping:message": "Hello, World!",
+    "hydra:apiDocumentation": "https://frob.nl/tmp/hydra/api.jsonld"
 }

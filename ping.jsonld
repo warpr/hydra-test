@@ -18,14 +18,14 @@
         },
         {
             "@id": "ping:Pong",
-            "@type": "owl:Class",
-            "rdfs:comment": "A response to a ping request",
-            "rdfs:label": "Pong"
+            "@type": [ "owl:Class", "hydra:Resource" ],
+            "rdfs:label": "ping:Pong",
+            "rdfs:comment": "A response to a ping request"
         },
         {
             "@id": "ping:message",
             "@type": "owl:DatatypeProperty",
-            "rdfs:label": "Message",
+            "rdfs:label": "ping:message",
             "rdfs:comment": "The payload of a pong response",
             "rdfs:domain": "ping:Pong",
             "rdfs:range": "xsd:string"

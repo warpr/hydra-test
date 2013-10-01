@@ -1,0 +1,17 @@
+{
+    "@context": {
+        "dc": "http://purl.org/dc/terms/",
+        "hydra": "http://purl.org/hydra/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+        "papi": "https://frob.nl/tmp/hydra/ping.api.jsonld",
+        "ping": "https://frob.nl/tmp/hydra/ping.jsonld",
+
+        "papi:request": { "@type": "@id" }
+    },
+    "papi:request": "https://frob.nl/tmp/hydra/pong.jsonld"
+}
+
