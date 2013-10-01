@@ -17,8 +17,17 @@
                         "@id": "papi:request/GET",
                         "@type": "hydra:Operation",
                         "rdfs:label": "papi:request/GET",
+                        "rdfs:comment": "perform a ping request",
                         "hydra:method": "GET",
-                        "hydra:returns": "ping:Pong"
+                        "hydra:returns": "ping:Pong",
+                        "hydra:statusCodes": [
+                            {
+                                "@id": "papi:status/OK",
+                                "@type": "hydra:StatusCodeDescription",
+                                "hydra:statusCode": 200,
+                                "rdfs:comment": "OK"
+                            }
+                        ]
                     }
                 ],
                 "rdfs:range": "xsd:anyURI"
@@ -31,8 +40,10 @@
             "@id": "papi:Root/GET",
             "@type": "hydra:Operation",
             "rdfs:label": "papi:Root/GET",
+            "rdfs:comment": "fetch the API entry point",
             "hydra:returns": "papi:Root",
-            "hydra:method": "GET"
+            "hydra:method": "GET",
+            "hydra:statusCodes": [ { "@id": "papi:status/OK" } ]
         }
     ]
 }
